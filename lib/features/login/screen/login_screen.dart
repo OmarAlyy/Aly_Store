@@ -9,7 +9,6 @@ import '../widgets/login_form.dart';
 import '../widgets/login_header.dart';
 import '../../../common/widgets/login_signup/social_auth_buttons.dart';
 
-
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 

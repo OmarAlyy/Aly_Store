@@ -22,8 +22,8 @@ class LoginDivider extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: Text(dividerText,
-              style: Theme.of(context).textTheme.labelMedium),
+          child:
+              Text(dividerText, style: Theme.of(context).textTheme.labelMedium),
         ),
         Expanded(
           child: Divider(
