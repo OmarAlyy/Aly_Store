@@ -1,3 +1,5 @@
+import 'package:aly_store/features/password_configuration/screen/forget_password.dart';
+import 'package:aly_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -34,7 +36,7 @@ class LoginForm extends StatelessWidget {
               const Text(TTexts.rememberMe),
               const Spacer(),
               TextButton(
-                onPressed: () {},
+                onPressed: () => Get.to(const ForgetPassword()),
                 child: const Text(TTexts.forgetPassword),
               ),
             ],
@@ -43,7 +45,7 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {}, child: const Text(TTexts.signIn)),
+                onPressed: () => Get.to( () => const NavigationMenu()), child: const Text(TTexts.signIn)),
           ),
           const SizedBox(height: TSizes.spaceBtwItems),
           SizedBox(

@@ -1,4 +1,4 @@
-// signup_screen.dart
+// forget_password.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:aly_store/common/widgets/login_signup/form_divider.dart';
