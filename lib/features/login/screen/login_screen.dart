@@ -9,35 +9,37 @@ import '../widgets/login_form.dart';
 import '../widgets/login_header.dart';
 import '../../../common/widgets/login_signup/social_auth_buttons.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class LoginScreen extends StatelessWidget
+{
+    const LoginScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        padding: TSpacingStyle.paddingWithAppBarHeight,
-        child: Column(
-          children: const [
-            // Logo, title & subtitle
-            LoginHeader(),
+    @override
+    Widget build(BuildContext context) 
+    {
+        return Scaffold(
+            body: SingleChildScrollView(
+                padding: TSpacingStyle.paddingWithAppBarHeight,
+                child: Column(
+                    children: const[
+                        // Logo, title & subtitle
+                        LoginHeader(),
 
-            SizedBox(height: TSizes.spaceBtwSections),
+                        SizedBox(height: TSizes.spaceBtwSections),
 
-            // Email / password form
-            LoginForm(),
-            SizedBox(height: TSizes.spaceBtwSections),
+                        // Email / password form
+                        LoginForm(),
+                        SizedBox(height: TSizes.spaceBtwSections),
 
-            // Divider with “or sign-in with”
-            LoginDivider(dividerText: TTexts.orSignInWith),
+                        // Divider with “or sign-in with”
+                        LoginDivider(dividerText: TTexts.orSignInWith),
 
-            SizedBox(height: TSizes.spaceBtwSections),
+                        SizedBox(height: TSizes.spaceBtwSections),
 
-            // Google / Facebook buttons
-            SocialAuthButtons(),
-          ],
-        ),
-      ),
-    );
-  }
+                        // Google / Facebook buttons
+                        SocialAuthButtons()
+                    ]
+                )
+            )
+        );
+    }
 }

@@ -7,73 +7,77 @@ import '../../../utils/constants/sizes.dart';
 import '../../../utils/constants/text_strings.dart';
 import '../../../utils/helpers/helper_functions.dart';
 
-class ResetPassword extends StatelessWidget {
-  const ResetPassword({super.key});
+class ResetPassword extends StatelessWidget
+{
+    const ResetPassword({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            onPressed: () => Get.back(),
-            icon: const Icon(CupertinoIcons.clear),
-          ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
-          child: Column(
-            children: [
-              /// Image
-              Image(
-                image: const AssetImage(TImages.deliveredEmailIllustration),
-                width: THelperFunctions.screenWidth() * 0.6,
-              ),
-              const SizedBox(height: TSizes.spaceBtwSections),
+    @override
+    Widget build(BuildContext context) 
+    {
+        return Scaffold(
+            appBar: AppBar(
+                automaticallyImplyLeading: false,
+                actions: [
+                    IconButton(
+                        onPressed: () => Get.back(),
+                        icon: const Icon(CupertinoIcons.clear)
+                    )
+                ]
+            ),
+            body: SingleChildScrollView(
+                child: Padding(
+                    padding: const EdgeInsets.all(TSizes.defaultSpace),
+                    child: Column(
+                        children: [
+                            /// Image
+                            Image(
+                                image: const AssetImage(TImages.deliveredEmailIllustration),
+                                width: THelperFunctions.screenWidth() * 0.6
+                            ),
+                            const SizedBox(height: TSizes.spaceBtwSections),
 
-              /// Title & Subtitle
-              Text(
-                TTexts.changeYourPasswordTitle,
-                style: Theme.of(context).textTheme.headlineMedium,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: TSizes.spaceBtwItems),
-              Text(
-                TTexts.changeYourPasswordSubTitle,
-                style: Theme.of(context).textTheme.labelMedium,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: TSizes.spaceBtwSections),
+                            /// Title & Subtitle
+                            Text(
+                                TTexts.changeYourPasswordTitle,
+                                style: Theme.of(context).textTheme.headlineMedium,
+                                textAlign: TextAlign.center
+                            ),
+                            const SizedBox(height: TSizes.spaceBtwItems),
+                            Text(
+                                TTexts.changeYourPasswordSubTitle,
+                                style: Theme.of(context).textTheme.labelMedium,
+                                textAlign: TextAlign.center
+                            ),
+                            const SizedBox(height: TSizes.spaceBtwSections),
 
-              /// Done Button
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Handle password reset confirmation
-                  },
-                  child: const Text(TTexts.done),
-                ),
-              ),
-              const SizedBox(height: TSizes.spaceBtwItems),
+                            /// Done Button
+                            SizedBox(
+                                width: double.infinity,
+                                child: ElevatedButton(
+                                    onPressed: ()
+                                    {
+                                        // Handle password reset confirmation
+                                    },
+                                    child: const Text(TTexts.done)
+                                )
+                            ),
+                            const SizedBox(height: TSizes.spaceBtwItems),
 
-              /// Resend Email Button
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: () {
-                    // Handle resend email action
-                  },
-                  child: const Text(TTexts.resendEmail),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+                            /// Resend Email Button
+                            SizedBox(
+                                width: double.infinity,
+                                child: TextButton(
+                                    onPressed: ()
+                                    {
+                                        // Handle resend email action
+                                    },
+                                    child: const Text(TTexts.resendEmail)
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
 }
